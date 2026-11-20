@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f4eee5">
+  <meta name="description" content="Um convite especial para celebrar o nosso casamento.">
+  <title>O Nosso Casamento | Convite Digital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="intro-screen" id="introScreen" aria-label="Abertura do convite">
+    <div class="intro-frame">
+      <span class="eyebrow">UM CONVITE ESPECIAL</span>
+      <div class="intro-ornament" aria-hidden="true">✧</div>
+      <p class="intro-kicker">Com amor, convidamos-te para</p>
+      <h1 id="introNames">Amélia <span>&</span> Mateus</h1>
+      <p class="intro-date" id="introDate">15 . AGOSTO . 2027</p>
+      <button class="button button-gold" id="openInvitation" type="button">ABRIR CONVITE <span>↗</span></button>
+      <p class="intro-footnote">Um dia para guardar para sempre</p>
+    </div>
+  </div>
+
+  <header class="site-header">
+    <a class="monogram" href="#inicio" aria-label="Início">A<span>&</span>M</a>
+    <button class="music-button" id="musicToggle" type="button" aria-label="Reproduzir música" aria-pressed="false">
+      <span class="music-icon">♫</span><span id="musicLabel">MÚSICA</span>
+    </button>
+  </header>
+
+  <main id="invitation" class="invitation" aria-hidden="true">
+    <section class="hero section" id="inicio">
+      <div class="hero-image-wrap">
+        <img id="heroPhoto" src="images/casal-principal.jpg" alt="Fotografia dos noivos" class="hero-image"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';">
+        <div class="image-placeholder hero-placeholder"><span>ADICIONE AQUI</span><strong>A VOSSA FOTOGRAFIA</strong><small>images/casal-principal.jpg</small></div>
+        <div class="hero-overlay"></div>
+        <div class="hero-copy">
+          <span class="eyebrow light">VAMOS CELEBRAR O AMOR</span>
+          <h1 id="heroNames">Amélia <em>&</em> Mateus</h1>
+          <p id="heroDate">15 de Agosto de 2027</p>
+        </div>
+      </div>
+      <div class="scroll-note">DESLIZE PARA DESCOBRIR <span>↓</span></div>
+    </section>
+
+    <section class="welcome section narrow">
+      <span class="eyebrow">COM A BÊNÇÃO DE DEUS E DAS NOSSAS FAMÍLIAS</span>
+      <div class="ornament">✧</div>
+      <h2>Dois corações,<br><em>uma só história.</em></h2>
+      <p class="welcome-message">Há momentos que se tornam eternos quando são partilhados com quem amamos. Será uma alegria imensa ter a sua presença no início deste novo capítulo das nossas vidas.</p>
+      <p class="signature" id="welcomeNames">Amélia & Mateus</p>
+    </section>
+
+    <section class="countdown-section section">
+      <div class="section-heading">
+        <span class="eyebrow">A CONTAGEM COMEÇOU</span>
+        <h2>O grande dia está a chegar</h2>
+      </div>
+      <div class="countdown" aria-label="Contagem decrescente">
+        <div><strong id="days">000</strong><span>DIAS</span></div>
+        <i></i><div><strong id="hours">00</strong><span>HORAS</span></div>
+        <i></i><div><strong id="minutes">00</strong><span>MINUTOS</span></div>
+        <i></i><div><strong id="seconds">00</strong><span>SEGUNDOS</span></div>
+      </div>
+      <p class="countdown-note" id="countdownNote">Estamos a preparar tudo com muito carinho.</p>
+    </section>
+
+    <section class="gallery-section section">
+      <div class="section-heading">
+        <span class="eyebrow">PEQUENOS INSTANTES, GRANDES MEMÓRIAS</span>
+        <h2>A nossa história</h2>
+      </div>
+      <div class="gallery">
+        <figure class="gallery-item tall"><img src="images/galeria-1.jpg" alt="Fotografia do casal 1" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"><div class="image-placeholder"><span>FOTOGRAFIA 01</span><small>images/galeria-1.jpg</small></div></figure>
+        <figure class="gallery-item"><img src="images/galeria-2.jpg" alt="Fotografia do casal 2" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"><div class="image-placeholder"><span>FOTOGRAFIA 02</span><small>images/galeria-2.jpg</small></div></figure>
+        <figure class="gallery-item"><img src="images/galeria-3.jpg" alt="Fotografia do casal 3" onerror="this.style.display='none'; this.nextElementSibling.style.display='grid';"><div class="image-placeholder"><span>FOTOGRAFIA 03</span><small>images/galeria-3.jpg</small></div></figure>
+      </div>
+    </section>
+
+    <section class="event-section section">
+      <div class="section-heading">
+        <span class="eyebrow">RESERVE ESTA DATA</span>
+        <h2>O dia do nosso casamento</h2>
+        <p>Será um prazer celebrar este momento consigo.</p>
+      </div>
+      <div class="event-grid">
+        <article class="event-card">
+          <span class="event-number">01</span><div class="event-symbol">✧</div>
+          <h3>Cerimónia</h3>
+          <p class="event-time" id="ceremonyTime">14h00</p>
+          <p id="ceremonyVenue">Igreja Exemplo, Luanda</p>
+          <a class="text-link" id="ceremonyMap" href="#" target="_blank" rel="noopener">VER LOCALIZAÇÃO ↗</a>
+        </article>
+        <article class="event-card">
+          <span class="event-number">02</span><div class="event-symbol">❦</div>
+          <h3>Recepção</h3>
+          <p class="event-time" id="receptionTime">17h00</p>
+          <p id="receptionVenue">Espaço Exemplo, Luanda</p>
+          <a class="text-link" id="receptionMap" href="#" target="_blank" rel="noopener">VER LOCALIZAÇÃO ↗</a>
+        </article>
+      </div>
+      <p class="dress-code"><span>TRAJE</span><br><strong id="dressCode">Formal / Elegante</strong></p>
+    </section>
+
+    <section class="rsvp-section section">
+      <div class="rsvp-card">
+        <span class="eyebrow light">A SUA PRESENÇA É O NOSSO PRESENTE</span>
+        <h2>Podemos contar consigo?</h2>
+        <p>Por favor, confirme a sua presença até à data indicada. A confirmação será enviada directamente pelo WhatsApp.</p>
+        <form id="rsvpForm" novalidate>
+          <label for="guestName">O seu nome completo</label>
+          <input id="guestName" name="guestName" type="text" placeholder="Escreva o seu nome" minlength="2" maxlength="80" required>
+          <label for="attendance">Confirmação de presença</label>
+          <select id="attendance" name="attendance" required>
+            <option value="">Seleccione uma opção</option>
+            <option value="Sim, estarei presente">Com alegria, estarei presente</option>
+            <option value="Não poderei estar presente">Infelizmente, não poderei estar presente</option>
+          </select>
+          <label for="guestCount">Número de pessoas (incluindo você)</label>
+          <select id="guestCount" name="guestCount">
+            <option value="1">1 pessoa</option><option value="2">2 pessoas</option><option value="3">3 pessoas</option><option value="4">4 pessoas</option><option value="5">5 pessoas</option>
+          </select>
+          <button class="button button-light" type="submit">ENVIAR CONFIRMAÇÃO <span>↗</span></button>
+          <p class="form-feedback" id="formFeedback" role="status" aria-live="polite"></p>
+        </form>
+        <small class="rsvp-deadline" id="rsvpDeadline">Confirme até 01 de Agosto de 2027</small>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-mark">A <span>&</span> M</div>
+      <p>Com amor, esperamos por si.</p>
+      <div class="footer-date" id="footerDate">15 . 08 . 2027</div>
+      <small>FEITO COM AMOR · CONVITE DIGITAL</small>
+    </footer>
+  </main>
+  <audio id="backgroundMusic" src="music/musica.mp3" preload="none" loop></audio>
+  <script src="js/script.js"></script>
+</body>
+</html>
