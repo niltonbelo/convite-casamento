@@ -4,25 +4,25 @@
    Data/hora: formato ISO local: AAAA-MM-DDTHH:MM:SS
    ========================================================== */
 const CONFIG = {
-  groom: "Mateus",
-  bride: "Amélia",
-  weddingDate: "2027-08-15T14:00:00",
-  dateLabel: "15 de Agosto de 2027",
-  introDateLabel: "15 . AGOSTO . 2027",
-  footerDateLabel: "15 . 08 . 2027",
+  groom: "Irfânia",
+  bride: "Nilton",
+  weddingDate: "2027-06-11T14:00:00",
+  dateLabel: "11 de Junho de 2027",
+  introDateLabel: "11 . JUNHO . 2027",
+  footerDateLabel: "11 . 06 . 2027",
   ceremony: {
     time: "14h00",
-    venue: "Igreja Exemplo, Luanda",
-    mapsUrl: "https://www.google.com/maps/search/?api=1&query=Igreja+Exemplo+Luanda"
+    venue: "Paroquia Santa Cruz, Madeira, Luanda",
+    mapsUrl: "https://maps.app.goo.gl/nkeQR6uKmtR9SRaC9"
   },
   reception: {
-    time: "17h00",
-    venue: "Espaço Exemplo, Luanda",
+    time: "21h00",
+    venue: "Salao NB, Luanda",
     mapsUrl: "https://www.google.com/maps/search/?api=1&query=Espa%C3%A7o+Exemplo+Luanda"
   },
   dressCode: "Formal / Elegante",
-  whatsappNumber: "244900000000", // SUBSTITUA pelo número que receberá as confirmações.
-  rsvpDeadline: "Confirme até 01 de Agosto de 2027",
+  whatsappNumber: "244931770322", // SUBSTITUA pelo número que receberá as confirmações.
+  rsvpDeadline: "Confirme até 01 de Maio de 2027",
   whatsappIntro: "Olá! Estou a responder ao convite de casamento de"
 };
 
