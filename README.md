@@ -74,3 +74,4 @@ convite-casamento/
 │   └── musica.mp3
 └── README.md
 ```
+Convite de casamento digital - projecto publicado com GitHub Pages.
