@@ -48,11 +48,23 @@
     </section>
 
     <section class="welcome section narrow">
-      <span class="eyebrow">COM A BÊNÇÃO DE DEUS E DAS NOSSAS FAMÍLIAS</span>
+      <span class="eyebrow">COM A BÊNÇÃO DE DEUS E DE NOSSOS PAIS</span>
+
+<div class="parents-names">
+  <div class="parents-family">
+    <p>Rosalino Ernesto Ferreira da Costa</p>
+    <p>Ana Paula Jesus dos Santos</p>
+  </div>
+
+  <div class="parents-family">
+    <p>Inácio Alexandre Tomé da Cruz</p>
+    <p>Ana Muhongo Diogo</p>
+  </div>
+</div>
       <div class="ornament">✧</div>
       <h2>De dois caminhos,<br><em>nasceu um só destino..</em></h2>
       <p class="welcome-message">Os momentos mais especiais da vida ganham ainda mais significado quando vividos ao lado de quem amamos. A sua presença tornará este dia ainda mais memorável, ao celebrarmos juntos o início de uma nova história.</p>
-      <p class="signature" id="welcomeNames">Amélia & Mateus</p>
+      <p class="signature" id="welcomeNames">Nilton & Irfânia</p>
     </section>
 
     <section class="countdown-section section">
@@ -67,7 +79,34 @@
         <i></i><div><strong id="seconds">00</strong><span>SEGUNDOS</span></div>
       </div>
       <p class="countdown-note" id="countdownNote">Estamos a preparar tudo com muito carinho.</p>
-    </section>
+    
+
+
+<!-- CALENDÁRIO ABAIXO DO CONTADOR -->
+<div class="calendar-card">
+  <div class="calendar-top">
+    <h3 id="calendarMonth">Junho de 2027</h3>
+  </div>
+
+  <div class="calendar-weekdays">
+    <span>SEG.</span>
+    <span>TER.</span>
+    <span>QUA.</span>
+    <span>QUI.</span>
+    <span>SEX.</span>
+    <span>SÁB.</span>
+    <span>DOM.</span>
+  </div>
+
+  <div class="calendar-days" id="calendarDays"></div>
+
+  <p class="calendar-note">
+    <span>♥</span> 11 de Junho de 2027 — O nosso casamento
+  </p>
+</div>
+<!-- FIM DO CALENDÁRIO -->
+ </section>
+
 
     <section class="gallery-section section">
       <div class="section-heading">
@@ -90,15 +129,34 @@
       </div>
       <div class="event-grid">
         <article class="event-card">
-          <span class="event-number">01</span><div class="event-symbol">✧</div>
+          
+<div class="event-symbol">
+  <svg class="church-icon" viewBox="0 0 64 64"
+       xmlns="http://www.w3.org/2000/svg"
+       fill="none" stroke="currentColor"
+       stroke-width="1.8" stroke-linecap="round"
+       stroke-linejoin="round" aria-hidden="true">
+    <path d="M32 5 V17 M26 11 H38"/>
+    <path d="M12 28 L32 17 L52 28"/>
+    <path d="M17 27 V55 H47 V27"/>
+    <path d="M27 55 V40 A5 5 0 0 1 37 40 V55"/>
+    <path d="M23 34 H24 M40 34 H41"/>
+    <path d="M10 55 H54"/>
+  </svg>
+</div>
+
           <h3>Cerimónia</h3>
           <p class="event-time" id="ceremonyTime">14h00</p>
           <p id="ceremonyVenue">Igreja Exemplo, Luanda</p>
           <a class="text-link" id="ceremonyMap" href="#" target="_blank" rel="noopener">VER LOCALIZAÇÃO ↗</a>
         </article>
         <article class="event-card">
-          <span class="event-number">02</span><div class="event-symbol">❦</div>
-          <h3>Recepção</h3>
+          
+<div class="event-symbol">
+  <img src="images/brinde.png" alt="Taças de celebração">
+</div>
+
+          <h3>Celebração Festiva</h3>
           <p class="event-time" id="receptionTime">17h00</p>
           <p id="receptionVenue">Espaço Exemplo, Luanda</p>
           <a class="text-link" id="receptionMap" href="#" target="_blank" rel="noopener">VER LOCALIZAÇÃO ↗</a>
@@ -110,6 +168,62 @@
     <strong id="dressCode"></strong>
 </p>
     </section>
+
+    <!-- LIVRO DE MENSAGENS -->
+    <section class="guestbook-section section" id="livro-mensagens">
+      <div class="section-heading">
+        <span class="eyebrow">PALAVRAS QUE FICAM PARA SEMPRE</span>
+        <h2>Deixe-nos uma mensagem</h2>
+        <p>Partilhe connosco uma palavra de carinho, uma bênção ou um desejo para esta nova etapa.</p>
+      </div>
+
+      <div class="guestbook-card">
+        <form id="guestbookForm">
+          <label for="messageGuestName">O seu nome</label>
+          <input
+            type="text"
+            id="messageGuestName"
+            name="guestName"
+            placeholder="Escreva o seu nome"
+            minlength="2"
+            maxlength="80"
+            required
+          >
+
+          <label for="guestMessage">A sua mensagem</label>
+          <textarea
+            id="guestMessage"
+            name="message"
+            placeholder="Escreva aqui uma mensagem para os noivos..."
+            minlength="3"
+            maxlength="1000"
+            rows="5"
+            required
+          ></textarea>
+
+          <button class="button button-gold" type="submit">
+            ENVIAR MENSAGEM <span>↗</span>
+          </button>
+
+          <p id="guestbookFeedback" class="guestbook-feedback"
+             role="status" aria-live="polite"></p>
+        </form>
+
+        <div class="guestbook-divider"></div>
+
+        <div class="guestbook-messages">
+          <h3>Mensagens dos nossos convidados</h3>
+          <div id="approvedMessages">
+            <p class="guestbook-empty">As mensagens aprovadas aparecerão aqui.</p>
+          </div>
+        </div>
+
+        <p class="guestbook-note">
+          As mensagens serão publicadas após a aprovação dos noivos.
+        </p>
+      </div>
+    </section>
+    <!-- FIM DO LIVRO DE MENSAGENS -->
 
     <section class="rsvp-section section">
       <div class="rsvp-card">
@@ -144,6 +258,7 @@
     </footer>
   </main>
   <audio id="backgroundMusic" src="music/musica.mp3" preload="none" loop></audio>
-  <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
