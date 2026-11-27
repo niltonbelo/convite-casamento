@@ -1,0 +1,213 @@
+
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel dos Noivos | Nilton & Irfânia</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      padding: 30px 16px;
+      font-family: Arial, sans-serif;
+      background: #f5f0e8;
+      color: #40382f;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: auto;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    header h1 {
+      font-family: Georgia, serif;
+      font-weight: normal;
+    }
+
+    .panel {
+      background: white;
+      padding: 25px;
+      border-radius: 12px;
+      box-shadow: 0 5px 25px #0000000d;
+      margin-bottom: 20px;
+    }
+
+    button {
+      border: 0;
+      border-radius: 6px;
+      padding: 12px 18px;
+      cursor: pointer;
+      font-size: 14px;
+      margin: 4px;
+    }
+
+    .login {
+      background: #292929;
+      color: white;
+    }
+
+    .approve {
+      background: #527c60;
+      color: white;
+    }
+
+    .delete {
+      background: #a94747;
+      color: white;
+    }
+
+    .logout {
+      background: #e9e2d8;
+      color: #40382f;
+    }
+
+/* ======================================
+   ESTATÍSTICAS DAS CONFIRMAÇÕES
+====================================== */
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.stat-card {
+  background: #f5f0e8;
+  border: 1px solid #e9e0d5;
+  border-radius: 10px;
+  padding: 20px 12px;
+  text-align: center;
+}
+
+.stat-card strong {
+  display: block;
+  font-family: Georgia, serif;
+  font-size: 30px;
+  color: #98784d;
+  margin-bottom: 8px;
+}
+
+.stat-card span {
+  display: block;
+  font-size: 12px;
+  color: #6f6255;
+  line-height: 1.4;
+}
+
+@media (max-width: 480px) {
+  .stat-card {
+    padding: 16px 8px;
+  }
+
+  .stat-card strong {
+    font-size: 25px;
+  }
+}
+    .message {
+      border: 1px solid #e9e0d5;
+      border-radius: 9px;
+      padding: 16px;
+      margin-top: 14px;
+      background: #fffdf9;
+    }
+
+    .message p {
+      line-height: 1.6;
+      overflow-wrap: anywhere;
+    }
+
+    .muted {
+      color: #887e72;
+      font-size: 13px;
+    }
+
+    [hidden] {
+      display: none !important;
+    }
+
+    #status {
+      margin-top: 15px;
+      line-height: 1.5;
+    }
+  </style>
+</head>
+
+<body>
+  <main class="container">
+    <header>
+      <h1>Nilton & Irfânia</h1>
+      <p>Livro de Mensagens — Painel dos Noivos</p>
+    </header>
+
+    <section class="panel" id="loginPanel">
+      <h2>Acesso privado</h2>
+      <p>Entra com a tua conta GitHub para gerir as mensagens.</p>
+      <button class="login" id="loginButton">
+        Entrar com GitHub
+      </button>
+      <p id="status" aria-live="polite"></p>
+    </section>
+
+    <section class="panel" id="adminPanel" hidden>
+      <h2>Gestão de mensagens</h2>
+      <p id="welcome"></p>
+      <button class="logout" id="logoutButton">Terminar sessão</button>
+
+      <h3>Confirmações de presença</h3>
+      <button class="login" id="exportRSVPs">
+  Exportar lista para Excel
+</button>
+
+<div class="stats">
+
+  <div class="stat-card">
+    <strong id="acceptedCount">0</strong>
+    <span>Confirmaram presença</span>
+  </div>
+
+  <div class="stat-card">
+    <strong id="declinedCount">0</strong>
+    <span>Não poderão comparecer</span>
+  </div>
+
+  <div class="stat-card">
+    <strong id="peopleCount">0</strong>
+    <span>Pessoas confirmadas</span>
+  </div>
+
+  <div class="stat-card">
+    <strong id="totalCount">0</strong>
+    <span>Total de respostas</span>
+  </div>
+
+</div>
+
+<div id="rsvps">
+  A carregar confirmações...
+</div>
+
+<hr style="margin: 30px 0; border: 0; border-top: 1px solid #e9e0d5;">
+
+<h3>Mensagens recebidas</h3>
+
+<div id="messages">
+  A carregar mensagens...
+</div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/admin.js"></script>
+</body>
+</html>
